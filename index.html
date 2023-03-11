@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Code Qr Generateur</title>
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+          /* .active{
+      transition: height 3s ease;
+      height: auto;
+   } */
+    </style>
+</head>
+<body>
+
+     <div class="box">
+         <h2>code qr Generateur</h2>
+         <input type="text" id="qr" class="inp" placeholder="Enter Your Link">
+         <div class="parent_class">
+         <input type="button" value="Generate" id="button">
+         </div>
+         <div class="qr-parent">
+         <div id="qrcode"></div>
+       
+        </div>
+        <div class="" style="display:flex;justify-content:center">
+        <button id="button2" style="margin-bottom: 5px;">Download Qr code</button>
+      </div>
+     </div>
+    
+    
+    
+  
+
+    <script src="qrcode.min.js"></script>
+    <script>
+        var btn = document.getElementById("button");
+         
+        let mainbox= document.querySelector(".box");
+        var qrcode=new QRCode(document.getElementById("qrcode"))
+        var qrdata=document.getElementById('qr');
+        function gg(){
+            var data=qrdata.value;
+        var coco=qrcode.makeCode(data);
+        }
+        function generate_qr(){
+         window.setTimeout("gg()",1200)
+      
+        mainbox.classList.add("active");
+        }
+     
+     
+     //function qui check si le champ est vide
+      btn.onclick= (e)=>{
+
+        let input = document.querySelector(".inp");
+      let test=false;
+      if(input.value.length>=8){
+        test=true;
+      }
+      if(test===false){
+        e.preventDefault();
+      }else{
+        generate_qr()
+          
+      }
+       
+      }
+
+
+let btn2 = document.querySelector("#button2");
+btn2.onclick=()=>{
+  let img = document.images;
+  let link = document.createElement("a");
+  link.href=img[0].src;
+  link.download = 'image.png';
+  link.click()
+}
+      
+     
+    </script>  
+</body>
+</html>

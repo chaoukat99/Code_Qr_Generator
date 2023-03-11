@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: #900dc4;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+      }
+  
+   .box{
+     background-color: white;
+     padding-top: 30px;
+     padding: 30px;
+     height: 300px;
+     transition: all 3s ease;
+     overflow: hidden;
+  
+   }
+   .active{
+      transition: height 1s ease;
+      height: 550px;
+   }
+   .box h2{
+       margin-bottom: 40px;
+       text-align: center;
+       font-size: 26px;
+       color: #ca09db;
+       font-family: sans-serif;
+       text-transform: capitalize;
+     }
+     input {
+       padding: 20px;
+       user-select: none;
+       height: 50px;
+       width: 400px;
+       border-radius: 6px;
+       border: none;
+       border: 2px solid #900dc4;
+       outline: none;
+       font-size: 22px;
+       }
+      
+      input::placeholder{
+        font-size: 23px;
+       } 
+       .parent_class{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       #button,#button2 {
+           font-family: sans-serif;
+           font-size: 15px;
+           margin-top: 40px;
+           border: 2px solid #900dc4;
+           font-size: 16pt;
+           font-weight: bold;
+           font-family: 'arial-black';
+           text-align: center;
+           background-color: #900dc4;
+           display: flex;
+           padding: 10px;
+           color: rgb(255, 255, 255);
+           justify-content: center;
+           align-items: center;
+           cursor: pointer;
+           border-radius: 5px; 
+           margin-top: 8px; 
+           margin-bottom: 40px;
+           transition: 0.5s;
+         }
+#button:hover{
+    background: #590a79;
+    transition: 0.5s;
+}
+#button2{
+  background: #590a79;
+  transition: 0.5s;
+}
+
+.qr-parent{
+   display: flex;
+   justify-content: center;
+}
+
+.btncontain{
+  display:flex;
+  justify-content: center;
+}
+.btncontain button{
+  font-family: sans-serif;
+  font-size: 15px;
+  border: 2px solid #900dc4;
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: 'arial-black';
+  text-align: center;
+  background-color: #900dc4;
+  display: flex;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px; 
+  margin-top: 8px; 
+  transition: 0.5s;
+  display: block;
+}
